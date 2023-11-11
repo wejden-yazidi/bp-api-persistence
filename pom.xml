@@ -1,0 +1,157 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bprice</groupId>
+  <artifactId>brpice-persistance-api</artifactId>
+  <version>0.0.2</version>
+  <packaging>jar</packaging>
+  <name>bprice-persistance-api</name>
+  
+  <properties>
+       <maven.compiler.source>1.8</maven.compiler.source>
+       <maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	
+	<parent>
+        <groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.3.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	
+  <!--<dependencies>-->
+
+  	<!--<dependency>-->
+    	<!--<groupId>org.springframework.boot</groupId>-->
+    	<!--<artifactId>spring-boot-starter</artifactId>-->
+	<!--</dependency>-->
+    <!--<dependency>-->
+		<!--<groupId>org.springframework.boot</groupId>-->
+		<!--<artifactId>spring-boot-starter-data-jpa</artifactId>-->
+	<!--</dependency>-->
+
+	<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-web</artifactId>-->
+	<!--</dependency>-->
+
+		<!--&lt;!&ndash; https://mvnrepository.com/artifact/javax.validation/validation-api &ndash;&gt;-->
+	<!--<dependency>-->
+	    <!--<groupId>javax.validation</groupId>-->
+	    <!--<artifactId>validation-api</artifactId>-->
+	    <!--<version>2.0.1.Final</version>-->
+	<!--</dependency>-->
+
+	<!--<dependency>-->
+    <!--<groupId>javax.servlet</groupId>-->
+    <!--<artifactId>javax.servlet-api</artifactId>-->
+    <!--<version>3.0.1</version>-->
+    <!--<scope>provided</scope>-->
+    <!--</dependency>-->
+
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.eclipse.persistence</groupId>-->
+            <!--<artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>-->
+            <!--<version>2.5.2</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+
+
+
+		<!--&lt;!&ndash; MongoDb &ndash;&gt;-->
+			<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-data-mongodb</artifactId>-->
+		<!--</dependency>-->
+
+
+
+  <!--</dependencies>-->
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <!-- spring boot web mvc jar -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+      <plugins>
+
+           <plugin>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-maven-plugin</artifactId>
+			  <executions>
+			    <execution>
+			      <goals>
+			        <goal>repackage</goal>
+			      </goals>
+			      <configuration>
+			        <classifier>exec</classifier>
+			      </configuration>
+			    </execution>
+			  </executions>
+          </plugin>
+
+
+
+<!-- 		  <plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-release-plugin</artifactId> -->
+<!-- 				<version>2.5.2</version> -->
+<!-- 				<configuration> -->
+<!-- 					release case -->
+<!-- 					<tagBase>https://www.gitlab.veganet.com.tn/easylink-api/el-api-persistence.git</tagBase> -->
+<!-- 					<autoVersionSubmodules>true</autoVersionSubmodules> -->
+<!-- 					<releaseProfiles>releases</releaseProfiles> -->
+<!-- 					snapshot case <skip>true</skip> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.sonatype.plugins</groupId> -->
+<!-- 				<artifactId>nexus-staging-maven-plugin</artifactId> -->
+<!-- 				<version>1.6.8</version> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<id>default-deploy</id> -->
+<!-- 						<phase>deploy</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>deploy</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 				<configuration> -->
+<!-- 					<serverId>nexus</serverId> -->
+<!-- 					<nexusUrl>http://nexus.veganet.com.tn:8081/</nexusUrl> -->
+<!-- 					<skipStaging>true</skipStaging> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
+
+
+      </plugins>
+  </build>
+
+
+
+
+
+</project>

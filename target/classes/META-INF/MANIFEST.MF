@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: dell
+Build-Jdk: 17.0.1
+Implementation-Title: bprice-persistance-api
+Implementation-Version: 0.0.2
+Implementation-Vendor-Id: com.bprice
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/brpice-persistance-api
+Created-By: Maven Integration for Eclipse
+

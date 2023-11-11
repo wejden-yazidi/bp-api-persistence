@@ -1,0 +1,22 @@
+cache:
+  key: "${CI_COMMIT_REF_SLUG}"
+  paths:
+    - .m2/repository/
+    - target/
+
+variables:
+  MAVEN_CLI_OPTS: "--batch-mode"
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository/"
+
+stages:
+  - test
+
+Codedelivery:
+  stage: test
+  tags:
+    - test
+  script:
+    - mvn $MAVEN_CLI_OPTS deploy -DskipTests $MAVEN_OPTS
+    - echo "installing the package in local repository"
+  only :
+    - master
